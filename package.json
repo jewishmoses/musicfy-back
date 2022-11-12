@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "preinstall": "pip install spotdl",
+    "preinstall": "pip3 install spotdl",
     "dev": "nodemon",
     "start": "ts-node server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"

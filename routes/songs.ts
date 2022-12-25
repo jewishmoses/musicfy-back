@@ -42,7 +42,7 @@ router.get('/token', async (req: Request, res: Response) => {
 router.get('/:spotify_id', async (req: Request, res: Response) => {
 
     const { spotify_id } = req.params;
-    const { code, stderr } = shell.exec(`python -m spotdl --format mp3 --output "./songs/{track-id}" https://open.spotify.com/track/${spotify_id}`);
+    const { code, stderr } = shell.exec(`/opt/render/project/src/env/bin/spotdl --format mp3 --output "./songs/{track-id}" https://open.spotify.com/track/${spotify_id}`);
 
     if (code === 0) {
         res.download(`./songs/${spotify_id}.mp3`)
